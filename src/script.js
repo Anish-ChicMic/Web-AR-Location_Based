@@ -306,7 +306,7 @@ window.addEventListener('resize', function () {
 // listener for end loading of NFT marker
 window.addEventListener('arjs-nft-loaded', function (ev) {
     var heading = document.getElementById('heading');
-    heading.innerHTML = 'Loaded!';
+    heading.innerHTML = 'Loaded! 1st';
     console.log(ev);
 })
 
@@ -382,7 +382,7 @@ threeGLTFLoader.load("./Flamingo.glb", function (gltf) {
         model.position.y = (msg.height / msg.dpi * 2.54 * 10) / 2.0; //y axis?
         model.position.x = (msg.width / msg.dpi * 2.54 * 10) / 2.0; //x axis?
         var heading = document.getElementById('heading');
-        heading.innerHTML = 'Loaded!';
+        heading.innerHTML = 'Loaded! 2nd';
     })
 
 
