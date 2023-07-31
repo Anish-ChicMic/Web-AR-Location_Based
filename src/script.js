@@ -360,15 +360,11 @@ var threeGLTFLoader = new GLTFLoader();
 var model;
 
 threeGLTFLoader.load("./Flamingo.glb", function (gltf) {
-    model = gltf.scene.children[0];
-    model.name = 'Flamingo';
-    const clips = gltf.animations;
-
+    model = gltf.scene;
     var animation = gltf.animations[0];
     var mixer = new THREE.AnimationMixer(gltf.scene);
     mixers.push(mixer);
-    const clip = THREE.AnimationClip.findByName(clips, 'flamingo_flyA_');
-    var action = mixer.clipAction(clip);
+    const action = mixer.clipAction(animation);
     action.play();
 
     root.matrixAutoUpdate = false;
