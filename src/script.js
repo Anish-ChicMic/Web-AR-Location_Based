@@ -359,7 +359,7 @@ scene.add(root);
 var threeGLTFLoader = new GLTFLoader();
 var model;
 
-threeGLTFLoader.load("./assets/Flamingo.glb", function (gltf) {
+threeGLTFLoader.load("./Flamingo.glb", function (gltf) {
     model = gltf.scene.children[0];
     model.name = 'Flamingo';
     const clips = gltf.animations;
