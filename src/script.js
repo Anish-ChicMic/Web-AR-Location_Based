@@ -341,7 +341,7 @@ arToolkitContext.init(function onCompleted() {
 ////////////////////////////////////////////////////////////////////////////////
 
 // init controls for camera
-var markerControls = new THREEx.ArMarkerControls(arToolkitContext, camera, {
+var markerControls = new THREEx.ArMarkerControls('../', camera, {
     type: 'nft',
     descriptorsUrl: 'data/dataNFT/pinball',
     changeMatrixMode: 'cameraTransformMatrix'
