@@ -321,6 +321,7 @@ function onResize() {
 ////////////////////////////////////////////////////////////////////////////////
 
 // create atToolkitContext
+// THREEx.ArToolkitContext.baseURL = '../'
 var arToolkitContext = new THREEx.ArToolkitContext({
     detectionMode: 'mono',
     canvasWidth: 480,
@@ -329,7 +330,7 @@ var arToolkitContext = new THREEx.ArToolkitContext({
     sourceWidth: 480,
     sourceHeight: 640,
 })
-
+arToolkitContext.baseURL = '../';
 // initialize it
 arToolkitContext.init(function onCompleted() {
     // copy projection matrix to camera
@@ -341,7 +342,7 @@ arToolkitContext.init(function onCompleted() {
 ////////////////////////////////////////////////////////////////////////////////
 
 // init controls for camera
-var markerControls = new THREEx.ArMarkerControls('../', camera, {
+var markerControls = new THREEx.ArMarkerControls(arToolkitContext, camera, {
     type: 'nft',
     descriptorsUrl: 'data/dataNFT/pinball',
     changeMatrixMode: 'cameraTransformMatrix'
