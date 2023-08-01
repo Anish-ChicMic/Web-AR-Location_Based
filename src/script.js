@@ -382,7 +382,7 @@ threeGLTFLoader.load("./Flamingo.glb", function (gltf) {
         model.position.y = (msg.height / msg.dpi * 2.54 * 10) / 2.0; //y axis?
         model.position.x = (msg.width / msg.dpi * 2.54 * 10) / 2.0; //x axis?
         var heading = document.getElementById('heading');
-        heading.innerHTML = `${msg}`;
+        heading.innerHTML = `${msg.detail}`;
     })
 
 
