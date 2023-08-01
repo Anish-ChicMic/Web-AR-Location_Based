@@ -155,9 +155,10 @@ function main() {
             root.matrixAutoUpdate = false;
             root.add(model);
 
-            // model.position.x = longitude;
-            // model.position.y = latitude + 0.001;
-            // model.position.z = -100;
+            model.position.x = longitude;
+            model.position.y = latitude + 0.001;
+            model.position.z = -100;
+            console.log("Flamino Added")
         })
     }
 
