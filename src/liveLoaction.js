@@ -10,6 +10,25 @@ function main() {
     });
 
     const geom = new THREE.BoxGeometry(20, 20, 20);
+    var root = new THREE.Object3D();
+    scene.add(root);
+    var threeGLTFLoader = new GLTFLoader();
+    var model;
+
+    threeGLTFLoader.load("./Flamingo.glb", function (gltf) {
+        model = gltf.scene;
+        var animation = gltf.animations[0];
+        var mixer = new THREE.AnimationMixer(gltf.scene);
+        mixers.push(mixer);
+        const action = mixer.clipAction(animation);
+        action.play();
+
+        root.matrixAutoUpdate = false;
+        root.add(model);
+
+        model.position.z = -100;
+        //model.position.z = 100;
+    })
 
     const arjs = new THREEx.LocationBased(scene, camera);
 
@@ -87,6 +106,8 @@ function main() {
         return false;
     }
 
+
+
     function render(time) {
         resizeUpdate();
         if (orientationControls) orientationControls.update();
@@ -115,7 +136,29 @@ function main() {
         arjs.add(new THREE.Mesh(geom, material2), longitude, latitude - 0.001); // slightly south
         arjs.add(new THREE.Mesh(geom, material3), longitude - 0.001, latitude); // slightly west
         arjs.add(new THREE.Mesh(geom, material4), longitude + 0.001, latitude); // slightly east
+
+        var root = new THREE.Object3D();
+        scene.add(root);
+        var threeGLTFLoader = new GLTFLoader();
+        var model;
+
+        threeGLTFLoader.load("./Flamingo.glb", function (gltf) {
+            model = gltf.scene;
+            var animation = gltf.animations[0];
+            var mixer = new THREE.AnimationMixer(gltf.scene);
+            mixers.push(mixer);
+            const action = mixer.clipAction(animation);
+            action.play();
+
+            root.matrixAutoUpdate = false;
+            root.add(model);
+
+            model.position.x = longitude;
+            model.position.y = latitude + 0.001;
+            model.position.z = -100;
+        })
     }
+
 
     requestAnimationFrame(render);
 }
