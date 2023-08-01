@@ -18,7 +18,7 @@ function main() {
     arjs.add(box, 30.709330, 76.689280); //(30.709330, 76.689280, 30.7132906, 76.6908791)
 
 
-    arjs.fakeGps(30.709330, 76.689280);
+    // arjs.fakeGps(30.709330, 76.689280);
 
     requestAnimationFrame(render);
 
