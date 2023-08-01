@@ -377,10 +377,11 @@ threeGLTFLoader.load("./Flamingo.glb", function (gltf) {
     //model.position.z = 100;
 
     window.addEventListener('arjs-nft-init-data', function (nft) {
-        console.log("hey:", nft);
         var msg = nft.detail;
+        console.log("hey:", msg);
         model.position.y = (msg.height / msg.dpi * 2.54 * 10) / 2.0; //y axis?
         model.position.x = (msg.width / msg.dpi * 2.54 * 10) / 2.0; //x axis?
+        camera.lookAt(model.position);
         var heading = document.getElementById('heading');
         heading.innerHTML = `${msg.detail}`;
     })
