@@ -155,8 +155,8 @@ function main() {
             root.matrixAutoUpdate = false;
             root.add(model);
 
-            model.position.x = 10;
-            model.position.y = 10;
+            // model.position.x = 10;
+            // model.position.y = 10;
             model.position.z = -100;
             console.log("Flamino Added")
         })
