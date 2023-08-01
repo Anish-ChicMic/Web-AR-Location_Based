@@ -17,7 +17,7 @@ function main() {
     const box = new THREE.Mesh(geom, mtl);
 
     // Change this to a location 0.001 degrees of latitude north of you, so that you will face it
-    arjs.add(box, 30.7132906, 76.6908791);
+    arjs.add(box, 76.691090, 30.713229);
 
     // Start the GPS
     arjs.startGps();
