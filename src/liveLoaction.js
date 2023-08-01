@@ -15,7 +15,7 @@ function main() {
     const geom = new THREE.BoxGeometry(20, 20, 20);
     const mtl = new THREE.MeshBasicMaterial({ color: 0xff0000 });
     const box = new THREE.Mesh(geom, mtl);
-    arjs.add(box, -0.72, 51.051);
+    arjs.add(box, 30.709330, 76.689280); //(30.709330, 76.689280, 30.7132906, 76.6908791)
 
 
     arjs.fakeGps(-0.72, 51.05);
