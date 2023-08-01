@@ -20,7 +20,7 @@ const box = new THREE.Mesh(geom, mtl);
 const deviceOrientationControls = new THREEx.DeviceOrientationControls(camera);
 
 // Change this to a location close to you (e.g. 0.001 degrees of latitude north of you)
-arjs.add(box, -0.72, 51.051);
+arjs.add(box, 30.709330, 76.689280); //(30.709330, 76.689280, 30.7132906, 76.6908791)
 
 arjs.startGps();
 
