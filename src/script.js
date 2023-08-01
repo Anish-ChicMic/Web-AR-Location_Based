@@ -282,7 +282,7 @@ var light = new THREE.AmbientLight(0xffffff);
 scene.add(light);
 
 var pointLight = new THREE.PointLight("rgb(249, 202, 41, 100)", 0.7);
-pointLight.position.set(0, 3, 0);
+pointLight.position.set(0, 20, 30);
 scene.add(pointLight);
 
 var dLight = new THREE.DirectionalLight("rgb(66, 165, 245, 100)", 1);
@@ -390,8 +390,7 @@ threeGLTFLoader.load("./Flamingo.glb", function (gltf) {
         console.log("hey:", msg);
         // model.position.y = (msg.height / msg.dpi * 2.54 * 10) / 2.0; //y axis?
         // model.position.x = (msg.width / msg.dpi * 2.54 * 10) / 2.0; //x axis?
-        model.position.y = (msg.height * 2.54 * 10) / 2.0; //y axis?
-        model.position.x = (msg.width * 2.54 * 10) / 2.0; //x axis?
+        model.position.x += 50;
         model.rotation.x += 20;
         model.rotation.y += 20;
         model.rotation.z += 40;
