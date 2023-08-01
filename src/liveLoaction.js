@@ -7,6 +7,7 @@ const canvas = document.getElementById('locationBased-Canvas');
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(60, 1.33, 0.1, 10000);
 const renderer = new THREE.WebGLRenderer({ canvas: canvas });
+renderer.setPixelRatio(window.devicePixelRatio);
 
 const arjs = new THREEx.LocationBased(scene, camera);
 const cam = new THREEx.WebcamRenderer(renderer);
