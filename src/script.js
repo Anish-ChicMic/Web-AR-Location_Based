@@ -381,6 +381,9 @@ threeGLTFLoader.load("./Flamingo.glb", function (gltf) {
         console.log("hey:", msg);
         model.position.y = (msg.height / msg.dpi * 2.54 * 10) / 2.0; //y axis?
         model.position.x = (msg.width / msg.dpi * 2.54 * 10) / 2.0; //x axis?
+        model.rotation.x += 20;
+        model.rotation.y += 20;
+        model.rotation.z += 20;
         camera.lookAt(model.position);
         var heading = document.getElementById('heading');
         heading.innerHTML = `${msg.detail}`;
