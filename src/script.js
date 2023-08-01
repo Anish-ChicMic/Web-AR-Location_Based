@@ -391,7 +391,7 @@ threeGLTFLoader.load("./Flamingo.glb", function (gltf) {
         // model.position.y = (msg.height / msg.dpi * 2.54 * 10) / 2.0; //y axis?
         // model.position.x = (msg.width / msg.dpi * 2.54 * 10) / 2.0; //x axis?
         model.position.x += 50;
-        model.rotation.x += 20;
+        model.rotation.x += 40;
         model.rotation.y += 40;
         model.rotation.z += 40;
         camera.lookAt(model.position);
