@@ -14,7 +14,9 @@
     "dependencies": {
         "@ar-js-org/ar.js": "^3.4.5",
         "lil-gui": "^0.17.0",
-        "three": "^0.148.0"
+        "three": "^0.148.0",
+        "webpack": "^5.88.2",
+        "webpack-cli": "^5.1.4"
     },
     "description": "## Setup Download [Node.js](https://nodejs.org/en/download/). Run this followed commands:",
     "main": "vite.config.js",
