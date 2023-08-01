@@ -6,7 +6,7 @@ function main() {
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(80, 2, 0.1, 50000);
     const renderer = new THREE.WebGLRenderer({
-        canvas: document.querySelector('#canvas1')
+        canvas: document.getElementById('canvas1')
     });
 
     const geom = new THREE.BoxGeometry(20, 20, 20);
