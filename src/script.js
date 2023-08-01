@@ -281,6 +281,15 @@ scene.add(camera);
 var light = new THREE.AmbientLight(0xffffff);
 scene.add(light);
 
+var pointLight = new THREE.PointLight(0xffffff, 0.7);
+pointLight.position.set(0, 3, 0);
+scene.add(pointLight);
+
+var dLight = new THREE.DirectionalLight(0xffffff, 1);
+light.position.set(0, 20, 30);
+light.castShadow = true;
+scene.add(dLight);
+
 ////////////////////////////////////////////////////////////////////////////////
 //          handle arToolkitSource
 ////////////////////////////////////////////////////////////////////////////////
