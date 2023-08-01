@@ -1,5 +1,6 @@
 import * as THREE from 'three'
 import * as THREEx from '@ar-js-org/ar.js/three.js/build/ar-threex-location-only'
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 
 
 function main() {
