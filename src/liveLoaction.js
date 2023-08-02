@@ -16,9 +16,9 @@ function main() {
     var light = new THREE.AmbientLight(0xffffff);
     scene.add(light);
 
-    var pointLight = new THREE.PointLight("rgb(249, 202, 41, 100)", 0.7);
-    pointLight.position.set(0, 20, 30);
-    scene.add(pointLight);
+    // var pointLight = new THREE.PointLight("rgb(249, 202, 41, 100)", 0.7);
+    // pointLight.position.set(0, 20, 30);
+    // scene.add(pointLight);
 
     var dLight = new THREE.DirectionalLight("rgb(66, 165, 245, 100)", 1);
     light.position.set(0, 20, 30);
@@ -183,8 +183,8 @@ function main() {
             // root.add(model);
             scene.add(model)
 
-            model.position.x = -60;
-            model.position.y = -10;
+            model.position.x = -80;
+            model.position.y = -40;
             model.position.z = -100;
             // model.scale.set(5, 5, 5)
             console.log("Flamino Added", model)
