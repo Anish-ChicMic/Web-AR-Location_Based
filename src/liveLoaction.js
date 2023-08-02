@@ -171,7 +171,7 @@ function main() {
         var model;
         // var mixers = []
         threeGLTFLoader.load("./dragon-Low.glb", function (gltf) {
-            gltf.scene.scale.set(0.001, 0.001, 0.001);
+            gltf.scene.scale.set(10, 10, 10);
             model = gltf.scene;
             var animation = gltf.animations[0];
             var mixer = new THREE.AnimationMixer(gltf.scene);
