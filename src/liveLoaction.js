@@ -160,7 +160,7 @@ function main() {
             // model.position.x = 10;
             // model.position.y = 10;
             model.position.z = -100;
-            console.log("Flamino Added")
+            console.log("Flamino Added", model)
         })
         arjs.add(model, longitude, latitude + 0.001); // slightly north
     }
