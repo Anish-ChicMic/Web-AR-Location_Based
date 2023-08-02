@@ -130,19 +130,19 @@ function main() {
 
     function setupObjects(longitude, latitude) {
         // Use position of first GPS update (fake or real)
-        const material = new THREE.MeshBasicMaterial({ color: 0xff0000 });
-        const material2 = new THREE.MeshBasicMaterial({ color: 0xffff00 });
-        const material3 = new THREE.MeshBasicMaterial({ color: 0x0000ff });
-        const material4 = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-        arjs.add(new THREE.Mesh(geom, material), longitude, latitude + 0.001); // slightly north
-        arjs.add(new THREE.Mesh(geom, material2), longitude, latitude - 0.001); // slightly south
-        arjs.add(new THREE.Mesh(geom, material3), longitude - 0.001, latitude); // slightly west
-        arjs.add(new THREE.Mesh(geom, material4), longitude + 0.001, latitude); // slightly east
+        // const material = new THREE.MeshBasicMaterial({ color: 0xff0000 });
+        // const material2 = new THREE.MeshBasicMaterial({ color: 0xffff00 });
+        // const material3 = new THREE.MeshBasicMaterial({ color: 0x0000ff });
+        // const material4 = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+        // arjs.add(new THREE.Mesh(geom, material), longitude, latitude + 0.001); // slightly north
+        // arjs.add(new THREE.Mesh(geom, material2), longitude, latitude - 0.001); // slightly south
+        // arjs.add(new THREE.Mesh(geom, material3), longitude - 0.001, latitude); // slightly west
+        // arjs.add(new THREE.Mesh(geom, material4), longitude + 0.001, latitude); // slightly east
 
 
         // The below code not working yet
-        // var root = new THREE.Object3D();
-        // scene.add(root);
+        var root = new THREE.Object3D();
+        scene.add(root);
         var threeGLTFLoader = new GLTFLoader();
         var model;
         var mixers = []
@@ -154,15 +154,15 @@ function main() {
             const action = mixer.clipAction(animation);
             action.play();
 
-            // root.matrixAutoUpdate = false;
-            // root.add(model);
+            root.matrixAutoUpdate = false;
+            root.add(model);
 
             // model.position.x = 10;
             // model.position.y = 10;
             model.position.z = -100;
             console.log("Flamino Added", model)
         })
-        arjs.add(model, longitude, latitude + 0.001); // slightly north
+        arjs.add(root, longitude, latitude + 0.001); // slightly north
     }
 
 
