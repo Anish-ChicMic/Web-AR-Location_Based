@@ -147,7 +147,7 @@ function main() {
         var model;
         var mixers = []
         threeGLTFLoader.load("./Flamingo.glb", function (gltf) {
-            model = gltf.scene;
+            model = gltf;
             var animation = gltf.animations[0];
             var mixer = new THREE.AnimationMixer(gltf.scene);
             mixers.push(mixer);
