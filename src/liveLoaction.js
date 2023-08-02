@@ -174,7 +174,7 @@ function main() {
             model = gltf.scene;
             var animation = gltf.animations[0];
             var mixer = new THREE.AnimationMixer(gltf.scene);
-            mixers.push(mixer);
+            // mixers.push(mixer);
             const action = mixer.clipAction(animation);
             action.play();
             console.log(model);
