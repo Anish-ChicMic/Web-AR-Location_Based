@@ -5,9 +5,7 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 
 function main() {
     const scene = new THREE.Scene();
-    // const camera = new THREE.PerspectiveCamera(80, 2, 0.1, 50000);
-    var camera = new THREE.Camera();
-
+    const camera = new THREE.PerspectiveCamera(80, 2, 0.1, 50000);
     const renderer = new THREE.WebGLRenderer({
         canvas: document.getElementById('canvas1'),
         antialias: true,
