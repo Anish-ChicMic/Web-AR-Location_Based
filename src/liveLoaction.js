@@ -109,7 +109,7 @@ function main() {
     }
 
 
-
+    var mixers = []
     function render(time) {
         resizeUpdate();
         if (orientationControls) orientationControls.update();
@@ -163,7 +163,7 @@ function main() {
         scene.add(root);
         var threeGLTFLoader = new GLTFLoader();
         var model;
-        var mixers = []
+        // var mixers = []
         threeGLTFLoader.load("./Flamingo.glb", function (gltf) {
             model = gltf.scene;
             var animation = gltf.animations[0];
