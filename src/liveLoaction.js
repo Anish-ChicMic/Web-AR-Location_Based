@@ -21,8 +21,8 @@ function main() {
     // scene.add(pointLight);
 
     var dLight = new THREE.DirectionalLight("rgb(66, 165, 245, 100)", 1);
-    dlight.position.set(0, 200, 30);
-    dlight.castShadow = true;
+    dLight.position.set(0, 200, 30);
+    dLight.castShadow = true;
     scene.add(dLight);
 
     renderer.setPixelRatio(window.devicePixelRatio);
