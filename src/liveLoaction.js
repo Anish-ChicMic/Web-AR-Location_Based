@@ -5,13 +5,36 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 
 function main() {
     const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(80, 2, 0.1, 50000);
+    // const camera = new THREE.PerspectiveCamera(80, 2, 0.1, 50000);
+    var camera = new THREE.Camera();
+
     const renderer = new THREE.WebGLRenderer({
         canvas: document.getElementById('canvas1'),
         antialias: true,
         alpha: true,
         precision: 'mediump',
     });
+    scene.add(camera);
+    var light = new THREE.AmbientLight(0xffffff);
+    scene.add(light);
+
+    var pointLight = new THREE.PointLight("rgb(249, 202, 41, 100)", 0.7);
+    pointLight.position.set(0, 20, 30);
+    scene.add(pointLight);
+
+    var dLight = new THREE.DirectionalLight("rgb(66, 165, 245, 100)", 1);
+    light.position.set(0, 20, 30);
+    light.castShadow = true;
+    scene.add(dLight);
+
+    renderer.setPixelRatio(window.devicePixelRatio);
+
+    renderer.setClearColor(new THREE.Color('lightgrey'), 0)
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.domElement.style.position = 'absolute'
+    renderer.domElement.style.top = '0px'
+    renderer.domElement.style.left = '0px'
+    document.body.appendChild(renderer.domElement);
 
     const geom = new THREE.BoxGeometry(20, 20, 20);
     var clock = new THREE.Clock();
