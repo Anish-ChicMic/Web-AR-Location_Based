@@ -170,7 +170,7 @@ function main() {
         var threeGLTFLoader = new GLTFLoader();
         var model;
         // var mixers = []
-        threeGLTFLoader.load("./Flamingo.glb", function (gltf) {
+        threeGLTFLoader.load("./dragon-Low.glb", function (gltf) {
             model = gltf.scene;
             var animation = gltf.animations[0];
             var mixer = new THREE.AnimationMixer(gltf.scene);
