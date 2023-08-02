@@ -36,26 +36,7 @@ function main() {
 
     const geom = new THREE.BoxGeometry(20, 20, 20);
     var clock = new THREE.Clock();
-    // var root = new THREE.Object3D();
-    // scene.add(root);
-    // var threeGLTFLoader = new GLTFLoader();
-    // var model;
-    // var mixers = [];
 
-    // threeGLTFLoader.load("./Flamingo.glb", function (gltf) {
-    //     model = gltf.scene;
-    //     var animation = gltf.animations[0];
-    //     var mixer = new THREE.AnimationMixer(gltf.scene);
-    //     mixers.push(mixer);
-    //     const action = mixer.clipAction(animation);
-    //     action.play();
-
-    //     root.matrixAutoUpdate = false;
-    //     root.add(model);
-
-    //     model.position.z = -100;
-    //     //model.position.z = 100;
-    // })
 
     const arjs = new THREEx.LocationBased(scene, camera);
 
@@ -206,7 +187,7 @@ function main() {
             model.position.z = -100;
             console.log("Flamino Added", model)
         })
-        arjs.add(scene, longitude, latitude + 0.001); // slightly north
+        arjs.add(scene, longitude, latitude - 0.001); // slightly north
     }
 
 
