@@ -154,8 +154,8 @@ function main() {
             const action = mixer.clipAction(animation);
             action.play();
 
-            root.matrixAutoUpdate = false;
-            root.add(model);
+            // root.matrixAutoUpdate = false;
+            // root.add(model);
 
             // model.position.x = 10;
             // model.position.y = 10;
