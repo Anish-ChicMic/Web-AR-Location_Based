@@ -153,7 +153,7 @@ function main() {
             mixers.push(mixer);
             const action = mixer.clipAction(animation);
             action.play();
-
+            console.log(model);
             root.matrixAutoUpdate = false;
             // root.add(model);
             scene.add(model)
