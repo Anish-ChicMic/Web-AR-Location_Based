@@ -183,7 +183,7 @@ function main() {
             // root.add(model);
             scene.add(model)
 
-            model.position.x = -80;
+            model.position.x = -30;
             model.position.y = -40;
             model.position.z = -100;
             // model.scale.set(5, 5, 5)
