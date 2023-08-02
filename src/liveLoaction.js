@@ -12,7 +12,7 @@ function main() {
         alpha: true,
         precision: 'mediump',
     });
-    scene.add(camera);
+    // scene.add(camera);
     var light = new THREE.AmbientLight(0xffffff);
     scene.add(light);
 
