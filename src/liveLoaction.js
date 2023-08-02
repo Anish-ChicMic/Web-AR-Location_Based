@@ -7,10 +7,14 @@ function main() {
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(80, 2, 0.1, 50000);
     const renderer = new THREE.WebGLRenderer({
-        canvas: document.getElementById('canvas1')
+        canvas: document.getElementById('canvas1'),
+        antialias: true,
+        alpha: true,
+        precision: 'mediump',
     });
 
     const geom = new THREE.BoxGeometry(20, 20, 20);
+    var clock = new THREE.Clock();
     // var root = new THREE.Object3D();
     // scene.add(root);
     // var threeGLTFLoader = new GLTFLoader();
