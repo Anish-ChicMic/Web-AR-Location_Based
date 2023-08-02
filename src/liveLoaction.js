@@ -114,6 +114,24 @@ function main() {
         resizeUpdate();
         if (orientationControls) orientationControls.update();
         cam.update();
+
+        ///
+        if (mixers.length > 0) {
+            for (var i = 0; i < mixers.length; i++) {
+                mixers[i].update(clock.getDelta());
+            }
+        }
+
+        // if (!arToolkitSource.ready) {
+        //     return;
+        // }
+
+        // arToolkitContext.update(arToolkitSource.domElement)
+
+        // update scene.visible if the marker is seen
+        scene.visible = camera.visible;
+
+        // renderer.render(scene, camera);
         renderer.render(scene, camera);
         requestAnimationFrame(render);
     }
@@ -151,7 +169,7 @@ function main() {
             var animation = gltf.animations[0];
             var mixer = new THREE.AnimationMixer(gltf.scene);
             mixers.push(mixer);
-            const action = mixers.clipAction(animation);
+            const action = mixer.clipAction(animation);
             action.play();
             console.log(model);
             root.matrixAutoUpdate = false;
