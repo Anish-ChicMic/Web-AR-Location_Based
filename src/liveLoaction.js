@@ -147,7 +147,7 @@ function main() {
         var model;
         var mixers = []
         threeGLTFLoader.load("./Flamingo.glb", function (gltf) {
-            model = gltf;
+            model = gltf.scene;
             var animation = gltf.animations[0];
             var mixer = new THREE.AnimationMixer(gltf.scene);
             mixers.push(mixer);
@@ -155,14 +155,15 @@ function main() {
             action.play();
 
             root.matrixAutoUpdate = false;
-            root.add(model);
+            // root.add(model);
+            scene.add(model)
 
             // model.position.x = 10;
             // model.position.y = 10;
             model.position.z = -100;
             console.log("Flamino Added", model)
         })
-        arjs.add(root, longitude, latitude + 0.001); // slightly north
+        arjs.add(scene, longitude, latitude + 0.001); // slightly north
     }
 
 
