@@ -147,11 +147,11 @@ function main() {
         var model;
         var mixers = []
         threeGLTFLoader.load("./Flamingo.glb", function (gltf) {
-            model = gltf;
+            model = gltf.scene;
             var animation = gltf.animations[0];
             var mixer = new THREE.AnimationMixer(gltf.scene);
             mixers.push(mixer);
-            const action = mixer.clipAction(animation);
+            const action = mixers.clipAction(animation);
             action.play();
             console.log(model);
             root.matrixAutoUpdate = false;
