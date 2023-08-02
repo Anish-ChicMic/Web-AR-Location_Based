@@ -185,6 +185,7 @@ function main() {
             model.position.x = -100;
             model.position.y = 10;
             model.position.z = -100;
+            model.scale.set(5, 5, 5)
             console.log("Flamino Added", model)
         })
         arjs.add(scene, longitude, latitude - 0.001); // slightly north
